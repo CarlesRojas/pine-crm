@@ -12,7 +12,7 @@ declare module 'next-auth' {
   }
 }
 
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
   adapter: DrizzleAdapter(db),
   callbacks: {
     session: ({ session, user }) => {

@@ -1,5 +1,4 @@
 import NextAuthProvider from '@/lib/auth/Provider';
-import { checkAuth } from '@/lib/auth/utils';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import './globals.css';
@@ -12,8 +11,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  checkAuth();
-
   return (
     <html lang="en">
       <body className={montserrat.className}>
