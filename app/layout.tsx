@@ -14,7 +14,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body
+        className={`${montserrat.className} min-h-screen max-h-screen relative overflow-hidden flex flex-col bg-zinc-50 dark:bg-zinc-950 text-zinc-950 dark:text-zinc-50`}
+      >
         <NextAuthProvider>{children}</NextAuthProvider>
       </body>
     </html>

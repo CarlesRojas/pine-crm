@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground: 0, 0, 0;
-  --background: 240, 240, 240;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: 255, 255, 255;
-    --background: 15, 15, 15;
-  }
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -27,8 +15,6 @@ body {
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgb(var(--foreground));
-  background: rgb(var(--background));
 }
 
 img,
