@@ -12,7 +12,7 @@ export default function SignIn() {
 
   if (status === 'loading')
     return (
-      <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gray-200 dark:bg-gray-700 p-2 shadow-md">
+      <div className="relative w-12 h-12 rounded-full overflow-hidden bg-zinc-200 dark:bg-zinc-700 p-2 shadow-md">
         <RiLoader3Fill className="animate-spin w-full h-full" />
       </div>
     );
@@ -31,17 +31,20 @@ export default function SignIn() {
 
     return (
       <button onClick={() => signOut()}>
-        <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gray-300 dark:bg-gray-600 p-2 shadow-md hover:scale-105">
-          <Image src={src} alt="user avatar" fill />
+        <div className="relative w-12 h-12 rounded-full overflow-hidden bg-zinc-300 dark:bg-zinc-600 p-2 shadow-md hover:scale-105">
+          <Image src={src} alt="user avatar" fill priority />
         </div>
       </button>
     );
   }
 
   return (
-    <button onClick={() => signIn('google', { redirect: true, callbackUrl: '/' })}>
-      <RiGoogleFill />
-      <p>Sign in with Google</p>
+    <button
+      className="relative dark:bg-zinc-50 bg-zinc-950 dark:text-zinc-950 text-zinc-50 rounded-full px-6 h-12 flex items-center gap-4 shadow-md hover:scale-105"
+      onClick={() => signIn('google', { redirect: true, callbackUrl: '/' })}
+    >
+      <RiGoogleFill className="w-6 h-6" />
+      <p className="font-semibold">Sign in with Google</p>
     </button>
   );
 }

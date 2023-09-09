@@ -7,7 +7,7 @@ import './globals.css';
 const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Pine CRM',
+  title: 'PineCRM',
   description: 'Manage customer related objects.'
 };
 

@@ -1,4 +1,4 @@
-# Pine CRM
+# PineCRM
 
 ## Development
 
